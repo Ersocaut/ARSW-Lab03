@@ -13,9 +13,7 @@ import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  *
@@ -52,15 +50,15 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
     }
 
     @Override
-    public ArrayList<Blueprint> getBlueprintByAuthor(String author) throws BlueprintPersistenceException {
-        ArrayList<Blueprint> r = new ArrayList<>();
+    public Set<Blueprint> getBlueprintByAuthor(String author) throws BlueprintPersistenceException {
+        Set<Blueprint> r = new HashSet<>();
+        int cont = 0;
         for (Tuple<String, String> k : blueprints.keySet()){
             if (k.o1.equals(author)){
                 r.add(blueprints.get(k));
+                System.out.println("El plano " + k.o2 + " es de la autoría de " + k.o1);
             }
         }
         return r;
     }
-
-
 }

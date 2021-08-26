@@ -10,6 +10,7 @@ import edu.eci.arsw.blueprints.persistence.impl.Tuple;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -40,6 +41,6 @@ public interface BlueprintsPersistence {
      * @return the blueprints made for the author searched
      * @throws BlueprintPersistenceException if there aren't any blueprints
      */
-    public ArrayList<Blueprint> getBlueprintByAuthor (String author) throws BlueprintPersistenceException;
+    public Set<Blueprint> getBlueprintByAuthor (String author) throws BlueprintPersistenceException;
 
 }
