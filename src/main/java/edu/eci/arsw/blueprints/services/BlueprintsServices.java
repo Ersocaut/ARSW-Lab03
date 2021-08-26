@@ -25,8 +25,7 @@ public class BlueprintsServices {
    
     @Autowired
     @Qualifier("InMemory")
-
-    BlueprintsPersistence bpp=null;
+    BlueprintsPersistence bpp;
     
     public void addNewBlueprint(Blueprint bp){
         
@@ -44,7 +43,7 @@ public class BlueprintsServices {
      * @throws BlueprintNotFoundException if there is no such blueprint
      */
     public Blueprint getBlueprint(String author,String name) throws BlueprintNotFoundException{
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return bpp.getBlueprint(author, name);
     }
     
     /**

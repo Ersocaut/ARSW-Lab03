@@ -13,6 +13,7 @@ import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,12 +26,12 @@ import java.util.Map;
 @Qualifier("InMemory")
 public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
 
-    private final Map<Tuple<String,String>,Blueprint> blueprints=new HashMap<>();
+    private final Map<Tuple<String,String>,Blueprint> blueprints = new HashMap<>();
 
     public InMemoryBlueprintPersistence() {
         //load stub data
-        Point[] pts=new Point[]{new Point(140, 140),new Point(115, 115)};
-        Blueprint bp=new Blueprint("_authorname_", "_bpname_ ",pts);
+        Point[] pts = new Point[]{new Point(140, 140),new Point(115, 115)};
+        Blueprint bp = new Blueprint("_authorname_", "_bpname_ ",pts);
         blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
         
     }    
@@ -50,6 +51,16 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         return blueprints.get(new Tuple<>(author, bprintname));
     }
 
-    
-    
+    @Override
+    public ArrayList<Blueprint> getBlueprintByAuthor(String author) throws BlueprintPersistenceException {
+        ArrayList<Blueprint> r = new ArrayList<>();
+        for (Tuple<String, String> k : blueprints.keySet()){
+            if (k.o1.equals(author)){
+                r.add(blueprints.get(k));
+            }
+        }
+        return r;
+    }
+
+
 }

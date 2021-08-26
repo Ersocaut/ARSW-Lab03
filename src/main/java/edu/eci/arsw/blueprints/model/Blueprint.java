@@ -9,21 +9,21 @@ import java.util.Objects;
 
 public class Blueprint {
 
-    private String author=null;
+    private String author = null;
     
-    private List<Point> points=null;
+    private List<Point> points = null;
     
-    private String name=null;
+    private String name = null;
             
     public Blueprint(String author,String name,Point[] pnts){
-        this.author=author;
-        this.name=name;
-        points=Arrays.asList(pnts);
+        this.author = author;
+        this.name = name;
+        points = Arrays.asList(pnts);
     }
          
     public Blueprint(String author, String name){
-        this.name=name;
-        points=new ArrayList<>();
+        this.name = name;
+        points = new ArrayList<>();
     }
 
     public Blueprint() {
