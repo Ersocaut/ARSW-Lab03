@@ -10,6 +10,7 @@
 | Camilo Rincón|[Rincon10](https://github.com/Rincon10 )  |
 |Galeano Garzón |[Ersocaut](https://github.com/Ersocaut)   |
 
+
 ### Compilando el proyecto:
 Para compilar el proyecto usaremos el siguiente comando
 ```
@@ -145,7 +146,7 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
     * <i><b>Pruebas:</b></i>
    
     <br>
-    <img src="img/testI-1.png" alt="testI-1" >
+    <img src="img/testI-2.png" alt="testI-2" >
     <br>
      
 3. Haga un programa en el que cree (mediante Spring) una instancia de BlueprintServices, y rectifique la funcionalidad del mismo: registrar planos, consultar planos, registrar planos específicos, etc.

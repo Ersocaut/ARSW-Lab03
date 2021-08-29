@@ -41,12 +41,16 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         }
         else{
             blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
-        }        
+        }
     }
 
     @Override
     public Blueprint getBlueprint(String author, String bprintname) throws BlueprintNotFoundException {
-        return blueprints.get(new Tuple<>(author, bprintname));
+        // Se lanza una excepcion en caso que el author o bprintname no exista
+        Optional<Blueprint> optionalBlueprint = Optional.ofNullable(blueprints.get(new Tuple<>(author, bprintname)));
+        optionalBlueprint.orElseThrow( () -> new BlueprintNotFoundException("No encontrado") );
+
+        return optionalBlueprint.get();
     }
 
     @Override
