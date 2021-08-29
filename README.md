@@ -153,7 +153,7 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
     <br>
         <img src="img/main.png" alt="main" >
     <br>
-    
+    Ejecución del programa
     <br>
         <img src="img/testI-3.png" alt="testI-3" >
     <br>
