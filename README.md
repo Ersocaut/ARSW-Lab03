@@ -33,7 +33,7 @@ O usar el comando
 ### Descripción
 En este ejercicio se va a construír un modelo de clases para la capa lógica de una aplicación que permita gestionar planos arquitectónicos de una prestigiosa compañia de diseño. 
 
-![](../ARSW-LAB03-B/img/ClassDiagram1.png)
+![](img/ClassDiagram1.png)
 
 ### Parte I.
 
@@ -146,7 +146,7 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
     * <i><b>Pruebas:</b></i>
    
     <br>
-    <img src="../ARSW-LAB03-B/img/testI-2.png" alt="testI-2" >
+    <img src="img/testI-2.png" alt="testI-2" >
     <br>
      
 3. Haga un programa en el que cree (mediante Spring) una instancia de BlueprintServices, y rectifique la funcionalidad del mismo: registrar planos, consultar planos, registrar planos específicos, etc.
