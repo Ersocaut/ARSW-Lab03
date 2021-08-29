@@ -18,7 +18,14 @@ public class Main implements CommandLineRunner {
 
     @Override
     public void run(String... arg0) throws Exception {
-        bps.addNewBlueprint(new Blueprint("Camilo", "Airetupal"));
-        bps.getBlueprintsByAuthor("Camilo");
+        int times = 5;
+        String author = "Juan";
+        System.out.println("Añadiendo "+times+" Planos asociados al autor"+ author);
+        for ( int x = 0; x < times; x++){
+            bps.addNewBlueprint(new Blueprint(author, "Airetupal"+x));
+        }
+        System.out.println("Se añadieron " + bps.getBlueprintsByAuthor(author).size() +" Planos del autor "+ author);
+        System.out.println("Consultando plano Airetupal0 del  autor "+author);
+        System.out.println("El plano encontrado es"+ bps.getBlueprint(author,"Airetupal0"));
     }
 }
