@@ -56,7 +56,7 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         for (Tuple<String, String> k : blueprints.keySet()){
             if (k.o1.equals(author)){
                 r.add(blueprints.get(k));
-                System.out.println("El plano " + k.o2 + " es de la autoría de " + k.o1);
+                //System.out.println("El plano " + k.o2 + " es de la autoría de " + k.o1);
             }
         }
         return r;
