@@ -18,12 +18,9 @@ mvn package
 ```
 ### Ejecutando el proyecto:
 Para hacer uso del proyecto debe haberlo compilado previamente , para ejecutarlo lo hacemos por medio de la consola usando el siguiente comando:
+
 ```
-mvn exec:java -Dexec.mainClass="edu.eci.arsw.blueprints.Main"
-```
-O usar el comando
-```
- mvn spring-boot:run
+mvn spring-boot:run
 ```
 
 
