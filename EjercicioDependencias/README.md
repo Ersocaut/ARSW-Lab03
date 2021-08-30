@@ -4,10 +4,8 @@
 
 ### Integrantes:
 
-|     Nombre    |     Git         |
-|--------------|------------- | 
-| Camilo Rincón|[Rincon10](https://github.com/Rincon10 )  |
-|Galeano Garzón |[Ersocaut](https://github.com/Ersocaut)   |
+- [Camilo Rincón](https://github.com/Rincon10 )
+- [Leonardo Galeano](https://github.com/Ersocaut)
 
 ### Compilando el proyecto:
 Para compilar el proyecto usaremos el siguiente comando
